@@ -1,0 +1,9 @@
+#dialog {
+  width: 300px;
+  height: auto;
+  background: red;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: opacity 1s; /* Safari */
+  transition: opacity 1s;
+}

@@ -1,0 +1,15 @@
+{
+  "name": "mobilab",
+  "version": "1.0.0",
+  "description": "Check if a zip code is in a given file.",
+  "main": "server.js",
+  "author": "lbosse",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
