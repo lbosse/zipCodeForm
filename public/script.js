@@ -1,13 +1,16 @@
+var myTimeout;
 var zipList = servicedCodes;
 
 function checkZip() {
+  if(myTimeout) 
+    clearTimeout(myTimeout);
   var zip = document.getElementById('zipInput').value;
   if(zipList.indexOf(zip) != -1) {
     document.getElementById('dialog').style.background = 'green';
     document.getElementById('dialog')
       .innerHTML = 'we service your zip code!'; 
     document.getElementById('dialog').style.opacity = 1;
-    setTimeout(() => {
+    myTimeout = setTimeout(() => {
       document.getElementById('dialog').style.opacity = 0;
     }, 3000);
   }
@@ -16,7 +19,7 @@ function checkZip() {
     document.getElementById('dialog')
       .innerHTML = 'sorry, we don\'t service your area yet!'; 
     document.getElementById('dialog').style.opacity = 1;
-    setTimeout(() => {
+    myTimeout = setTimeout(() => {
       document.getElementById('dialog').style.opacity = 0;
     }, 3000);
   }
